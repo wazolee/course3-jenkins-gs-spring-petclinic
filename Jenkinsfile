@@ -2,12 +2,7 @@ echo "Petclinic Pipe"
 
 pipeline{
     agent any
-    stages{
-        stage("checkout"){
-            steps{
-                git branch: 'main', url: 'https://github.com/wazolee/course3-jenkins-gs-spring-petclinic'
-            }
-        }
+    stages{        
         stage("build"){
             steps{
                 sh "mvn package"
